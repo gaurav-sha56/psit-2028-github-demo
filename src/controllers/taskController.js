@@ -8,7 +8,7 @@ function getAllTasks(req, res) {
 function getTask(req, res) {
   const task = taskService.getTaskById(req.params.id);
   if (!task) {
-    return res.status(404).json({ message: 'Task not found' });
+    return res.status(404).json({ message: 'Please try again your task is not found.' });
   }
   return res.json(task);
 }
